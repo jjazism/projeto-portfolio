@@ -38,6 +38,9 @@ header {
   display: flex;
   justify-content: flex-end;
   align-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 nav#menu ul{
@@ -247,9 +250,22 @@ article h2{
     border-left-width: 15px;
     cursor: pointer;
   }
+
+  footer{
+    background-color: var(--destaque);
+    color: var(--texto-inverso);
+    text-align: center;
+    padding: 10px;
+
+  }
+
+  footer a{
+    text-decoration: none;
+    color: var(--destaque-inverso);
+  }
 @media screen and (min-width :768px) {
     #skill-container {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: auto auto;
   }
 
   #projeto-container .foto{
@@ -264,12 +280,12 @@ article h2{
   }
 
   #projeto-container .projeto-info{
-    max-width: 60%;
+    max-width: 70%;
   }
 
   #projeto-container .foto{
     aspect-ratio: 1/1;
     max-height: 200px;
-    max-width: 40%;
+    max-width: 30%;
   }
 }
